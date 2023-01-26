@@ -1,11 +1,13 @@
 package exerciciosExtras;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class ExerciciosExtras {
     public static void main(String[] args) {
         exercicioExtra1();
         exercicioExtra2();
+        exercicioExtra3();
     }
     
     public static void exercicioExtra1() {
@@ -43,5 +45,51 @@ public class ExerciciosExtras {
                     System.out.println("Primo: " + numeroEmTeste);
             }
         }
+    }
+    
+    public static void exercicioExtra3() {
+        Random gerador = new Random();
+        
+        int[] arranj = new int[10];
+        for (int indice = 0; indice < arranj.length; indice++) {
+            arranj[indice] = gerador.nextInt(1000000);
+        }
+        
+        boolean refazer = true;
+        while (refazer) {
+            refazer = false;
+            for (int indice = 1; indice < arranj.length; indice++) {
+                if (!(arranj[indice] > arranj[indice - 1])) {
+                    refazer = true;
+                    
+                    int numeroAUsar = gerador.nextInt(arranj.length);
+                    int[] numerosUsados = new int[0];
+                    while (arranjoDeIntContem(numerosUsados, numeroAUsar))
+                        numeroAUsar = gerador.nextInt(arranj.length);
+                    numerosUsados = adicionaAArranjoDeInt(numerosUsados, numeroAUsar);
+                    
+                    int aux = arranj[indice];
+                    arranj[indice] = arranj[numeroAUsar];
+                    arranj[numeroAUsar] = aux;
+                    
+                    for (int i = 0; i < arranj.length; i++) System.out.print(arranj[i] + " ");
+                    System.out.println();
+                }
+            }
+        }
+    }
+    
+    public static int[] adicionaAArranjoDeInt(int[] arranjoAtual, int novoElemento) {
+        int[] arranjoComplementado = new int[arranjoAtual.length + 1];
+        for (int indice = 0; indice < arranjoAtual.length; indice++)
+            arranjoComplementado = arranjoAtual;
+        arranjoComplementado[arranjoAtual.length] = novoElemento;
+        return arranjoComplementado;
+    }
+    
+    public static boolean arranjoDeIntContem(int[] arranjoAVerificar, int elementoAProcurar) {
+        for (int indice = 0; indice < arranjoAVerificar.length; indice++)
+            if (arranjoAVerificar[indice] == elementoAProcurar) return true;
+        return false;
     }
 }
