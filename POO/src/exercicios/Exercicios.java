@@ -2,6 +2,8 @@ package exercicios;
 
 import java.util.Scanner;
 
+import exercicios.exercicio16.Pessoa;
+
 public class Exercicios {
     public static void main(String[] args) {
         exercicio13();
@@ -28,8 +30,8 @@ public class Exercicios {
     }
     
     public static void exercicio15() {
-        Calculadora calculadora = new Calculadora();
-        calculadora.run();
+        //Calculadora calculadora = new Calculadora();
+        //calculadora.run();
     }
     
     
@@ -58,6 +60,5 @@ public class Exercicios {
     public static int calcularSegundosRemanescentes(int segundos) {
         return segundos % 60 % 60;
     }
-    
     
 }
