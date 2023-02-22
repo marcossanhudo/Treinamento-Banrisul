@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>sauce</groupId>
+	<artifactId>demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Sauce Demo</name>
+  
+	<dependencies>
+		<dependency>
+			<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.8.0</version>
+		</dependency>
+		<dependency>
+			<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+			<groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-api</artifactId>
+		    <version>5.9.2</version>
+		</dependency>
+		<dependency>
+			<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		    <groupId>io.github.bonigarcia</groupId>
+		    <artifactId>webdrivermanager</artifactId>
+		    <version>5.3.2</version>
+		</dependency>
+		<dependency>
+			<!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+		    <groupId>com.github.javafaker</groupId>
+		    <artifactId>javafaker</artifactId>
+		    <version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		    <groupId>com.aventstack</groupId>
+		    <artifactId>extentreports</artifactId>
+		    <version>5.0.9</version>
+		</dependency>
+		<dependency>
+			<!-- https://mvnrepository.com/artifact/com.assertthat/selenium-shutterbug -->
+		    <groupId>com.assertthat</groupId>
+		    <artifactId>selenium-shutterbug</artifactId>
+		    <version>1.6</version>
+		</dependency>
+
+  </dependencies>
+</project>
